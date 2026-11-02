@@ -1,0 +1,450 @@
+/**
+ * Cryptoria Bitcoin Sats Converter — scoped styles.
+ * Every selector is nested under .cryptoria-sats-converter. No global/element
+ * resets, no font overrides, no theme- or Divi-specific selectors.
+ *
+ * Palette lives as custom properties on the wrapper so a host theme can override
+ * them. Layout, radius, accent bar and field treatment are shared by all three
+ * appearance modes; presets only change the tokens.
+ */
+
+.cryptoria-sats-converter {
+	--csc-surface: #faf7f0;
+	--csc-text: #161920;
+	--csc-muted: #4a453c;
+	--csc-input-bg: #ffffff;
+	--csc-input-text: #161920;
+	--csc-border: #8a7d63;
+	--csc-disabled-bg: #ebe4d6;
+	--csc-disabled-text: #5c5548;
+	--csc-focus: #c2410c;
+	--csc-error: #b91c1c;
+	--csc-selected: #f3e0c4;
+	--csc-accent: #c2410c;
+
+	position: relative;
+	display: block;
+	max-width: 32rem;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.95rem 1.1rem 0.85rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--csc-text);
+	background-color: var(--csc-surface);
+	border: 1px solid var(--csc-border);
+	border-radius: 10px;
+	box-shadow: 0 8px 24px rgba(22, 25, 32, 0.08);
+}
+
+.cryptoria-sats-converter::before {
+	content: "";
+	display: block;
+	height: 3px;
+	margin: -0.95rem -1.1rem 0.8rem;
+	background-color: var(--csc-accent);
+	border-radius: 10px 10px 0 0;
+}
+
+.cryptoria-sats-converter--neutral-light {
+	--csc-surface: #faf7f0;
+	--csc-text: #161920;
+	--csc-muted: #4a453c;
+	--csc-input-bg: #ffffff;
+	--csc-input-text: #161920;
+	--csc-border: #8a7d63;
+	--csc-disabled-bg: #ebe4d6;
+	--csc-disabled-text: #5c5548;
+	--csc-focus: #c2410c;
+	--csc-error: #b91c1c;
+	--csc-selected: #f3e0c4;
+	--csc-accent: #c2410c;
+}
+
+.cryptoria-sats-converter--cryptoria-dark {
+	--csc-surface: #26272a;
+	--csc-text: #ffffff;
+	--csc-muted: #c7c7c7;
+	--csc-input-bg: #1e1e20;
+	--csc-input-text: #ffffff;
+	--csc-border: #8a8248;
+	--csc-disabled-bg: #2d2e32;
+	--csc-disabled-text: #c7c7c7;
+	--csc-focus: #d4af37;
+	--csc-error: #ff7b7b;
+	--csc-selected: #2a2722;
+	--csc-accent: #f5931e;
+
+	border-color: rgba(212, 175, 55, 0.22);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.cryptoria-sats-converter--custom {
+	/* Allowlisted tokens are applied as sanitized inline CSS variables. */
+}
+
+.cryptoria-sats-converter--custom .cryptoria-sats-converter__currency-option {
+	color: var(--csc-input-text);
+}
+
+.cryptoria-sats-converter--custom .cryptoria-sats-converter__currency-option.is-selected {
+	color: var(--csc-text);
+}
+
+.cryptoria-sats-converter--custom .cryptoria-sats-converter__unit {
+	color: var(--csc-disabled-text);
+}
+
+.cryptoria-sats-converter *,
+.cryptoria-sats-converter *::before,
+.cryptoria-sats-converter *::after {
+	box-sizing: border-box;
+}
+
+.cryptoria-sats-converter__title {
+	margin: 0 0 0.7rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+	color: var(--csc-accent);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter__row {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 0.3rem;
+	margin: 0 0 0.65rem;
+}
+
+.cryptoria-sats-converter__row:last-of-type {
+	margin-bottom: 0.1rem;
+}
+
+.cryptoria-sats-converter__label {
+	display: block;
+	width: 100%;
+	font-weight: 600;
+	line-height: 1.35;
+	color: var(--csc-text);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"] {
+	display: block;
+	width: 100%;
+	min-width: 0;
+	min-height: 2.75rem;
+	padding: 0.6rem 0.8rem;
+	font: inherit;
+	color: var(--csc-input-text);
+	background: var(--csc-input-bg);
+	background-color: var(--csc-input-bg);
+	border: 1px solid var(--csc-border);
+	border-radius: 8px;
+	appearance: none;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"]:focus {
+	border-color: var(--csc-focus);
+	outline: none;
+}
+
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"]:focus-visible {
+	outline: 2px solid var(--csc-focus);
+	outline-offset: 2px;
+}
+
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"][aria-invalid="true"] {
+	border-color: var(--csc-error);
+	box-shadow: inset 3px 0 0 var(--csc-error);
+}
+
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"]:disabled,
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"][disabled] {
+	background: var(--csc-disabled-bg);
+	background-color: var(--csc-disabled-bg);
+	color: var(--csc-disabled-text);
+	cursor: not-allowed;
+}
+
+.cryptoria-sats-converter input.cryptoria-sats-converter__input[type="text"][readonly] {
+	background: var(--csc-disabled-bg);
+	background-color: var(--csc-disabled-bg);
+	color: var(--csc-input-text);
+	cursor: default;
+}
+
+.cryptoria-sats-converter--cryptoria-dark input.cryptoria-sats-converter__input[type="text"] {
+	color-scheme: dark;
+	background: #1e1e20;
+	background-color: #1e1e20;
+	color: #ffffff;
+	border-color: var(--csc-border);
+}
+
+.cryptoria-sats-converter--cryptoria-dark input.cryptoria-sats-converter__input[type="text"]:disabled,
+.cryptoria-sats-converter--cryptoria-dark input.cryptoria-sats-converter__input[type="text"][disabled] {
+	background: #2d2e32;
+	background-color: #2d2e32;
+	color: #c7c7c7;
+}
+
+.cryptoria-sats-converter--cryptoria-dark input.cryptoria-sats-converter__input[type="text"][readonly] {
+	background: #2d2e32;
+	background-color: #2d2e32;
+	color: #ffffff;
+}
+
+.cryptoria-sats-converter--cryptoria-dark input.cryptoria-sats-converter__input[type="text"]:focus-visible {
+	border-color: var(--csc-focus);
+	outline-color: var(--csc-focus);
+}
+
+.cryptoria-sats-converter--cryptoria-dark input.cryptoria-sats-converter__input[type="text"][aria-invalid="true"] {
+	border-color: var(--csc-error);
+	box-shadow: inset 3px 0 0 var(--csc-error);
+}
+
+.cryptoria-sats-converter__input-wrap {
+	display: flex;
+	align-items: stretch;
+	gap: 0;
+	min-width: 0;
+	background-color: var(--csc-input-bg);
+	border: 1px solid var(--csc-border);
+	border-radius: 8px;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cryptoria-sats-converter__input-wrap input.cryptoria-sats-converter__input[type="text"] {
+	flex: 1 1 auto;
+	border: 0;
+	border-radius: 8px 0 0 8px;
+	min-height: 2.75rem;
+	background: var(--csc-input-bg);
+	background-color: var(--csc-input-bg);
+}
+
+.cryptoria-sats-converter--cryptoria-dark .cryptoria-sats-converter__input-wrap input.cryptoria-sats-converter__input[type="text"] {
+	background: #1e1e20;
+	background-color: #1e1e20;
+	color: #ffffff;
+}
+
+.cryptoria-sats-converter--cryptoria-dark .cryptoria-sats-converter__input-wrap input.cryptoria-sats-converter__input[type="text"][readonly],
+.cryptoria-sats-converter--cryptoria-dark .cryptoria-sats-converter__input-wrap input.cryptoria-sats-converter__input[type="text"]:disabled,
+.cryptoria-sats-converter--cryptoria-dark .cryptoria-sats-converter__input-wrap input.cryptoria-sats-converter__input[type="text"][disabled] {
+	background: #2d2e32;
+	background-color: #2d2e32;
+}
+
+.cryptoria-sats-converter__input-wrap:focus-within {
+	border-color: var(--csc-focus);
+}
+
+.cryptoria-sats-converter__input-wrap.is-invalid {
+	border-color: var(--csc-error);
+	box-shadow: inset 3px 0 0 var(--csc-error);
+}
+
+.cryptoria-sats-converter__unit {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	min-height: 2.75rem;
+	padding: 0 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	color: var(--csc-text);
+	background-color: var(--csc-disabled-bg);
+	border: 0;
+	border-left: 1px solid var(--csc-border);
+	border-radius: 0 8px 8px 0;
+	white-space: nowrap;
+	cursor: default;
+	user-select: none;
+	pointer-events: none;
+}
+
+.cryptoria-sats-converter__note {
+	margin: 0;
+	font-size: 0.8125rem;
+	line-height: 1.4;
+	color: var(--csc-muted);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter__note:empty {
+	display: none;
+}
+
+.cryptoria-sats-converter__currency {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 0.3rem;
+	margin: 0 0 0.8rem;
+	padding: 0;
+	border: 0;
+	min-width: 0;
+	min-inline-size: 0;
+}
+
+.cryptoria-sats-converter__legend {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+.cryptoria-sats-converter__currency-options {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 0.3rem;
+	min-width: 0;
+	border: 1px solid var(--csc-border);
+	border-radius: 8px;
+	color: var(--csc-text);
+	background-color: var(--csc-input-bg);
+}
+
+.cryptoria-sats-converter__currency-option {
+	display: inline-flex;
+	flex: 1 1 0;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	margin: 0;
+	padding: 0.5rem 0.75rem;
+	min-width: 0;
+	min-height: 2.75rem;
+	font-weight: 600;
+	color: var(--csc-text);
+	cursor: pointer;
+	position: relative;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	box-shadow: none;
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.cryptoria-sats-converter__currency-option input[type="radio"] {
+	accent-color: var(--csc-accent);
+	flex: 0 0 auto;
+}
+
+.cryptoria-sats-converter__currency-option input[type="radio"]:focus {
+	outline: none;
+}
+
+.cryptoria-sats-converter__currency-option input[type="radio"]:focus-visible {
+	outline: 2px solid var(--csc-focus);
+	outline-offset: 2px;
+}
+
+.cryptoria-sats-converter__currency-option.is-selected {
+	background-color: var(--csc-selected);
+	font-weight: 700;
+	border-color: transparent;
+}
+
+.cryptoria-sats-converter__currency-option.is-selected::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	background-color: var(--csc-accent);
+	pointer-events: none;
+}
+
+.cryptoria-sats-converter__currency-single {
+	margin: 0 0 0.8rem;
+	font-weight: 600;
+	color: var(--csc-text);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter__field-error {
+	min-height: 0;
+	margin: 0;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--csc-error);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter__field-error:empty {
+	display: none;
+}
+
+.cryptoria-sats-converter__status {
+	margin: 0.25rem 0 0;
+	font-size: 0.8125rem;
+	line-height: 1.4;
+	color: var(--csc-muted);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter__jsnote {
+	margin: 0 0 0.7rem;
+	font-size: 0.8125rem;
+	line-height: 1.4;
+	color: var(--csc-muted);
+	overflow-wrap: anywhere;
+}
+
+.cryptoria-sats-converter.is-ready .cryptoria-sats-converter__jsnote,
+.cryptoria-sats-converter.is-unsupported .cryptoria-sats-converter__jsnote,
+.cryptoria-sats-converter.is-load-error .cryptoria-sats-converter__jsnote {
+	display: none;
+}
+
+.cryptoria-sats-converter.is-unsupported .cryptoria-sats-converter__status,
+.cryptoria-sats-converter.is-load-error .cryptoria-sats-converter__status {
+	color: var(--csc-error);
+	font-weight: 600;
+}
+
+@media (max-width: 22rem) {
+	.cryptoria-sats-converter {
+		padding: 0.85rem 0.85rem 0.75rem;
+	}
+
+	.cryptoria-sats-converter::before {
+		margin: -0.85rem -0.85rem 0.7rem;
+	}
+
+	.cryptoria-sats-converter__title {
+		font-size: 1.05rem;
+	}
+
+	.cryptoria-sats-converter__currency-option {
+		flex: 1 1 calc(50% - 0.25rem);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cryptoria-sats-converter,
+	.cryptoria-sats-converter *,
+	.cryptoria-sats-converter *::before,
+	.cryptoria-sats-converter *::after {
+		transition: none;
+	}
+}

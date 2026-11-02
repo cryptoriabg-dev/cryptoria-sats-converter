@@ -1,0 +1,120 @@
+/**
+ * Settings screen only. Selectors stay under #csc-settings so they cannot
+ * restyle unrelated WordPress colour or text fields.
+ */
+
+#csc-settings .csc-hex-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem 0.75rem;
+	margin: 0.45rem 0;
+}
+
+#csc-settings .csc-hex-row > label {
+	flex: 0 1 12rem;
+	margin: 0;
+}
+
+#csc-settings .csc-hex-control {
+	position: relative;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	min-width: 0;
+}
+
+#csc-settings .csc-hex-input {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+	width: 8.5em;
+	max-width: 100%;
+	text-transform: uppercase;
+}
+
+#csc-settings .csc-hex-swatch {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 1.75rem;
+	height: 1.75rem;
+	flex: 0 0 1.75rem;
+	padding: 0;
+	border: 1px solid #8c8f94;
+	border-radius: 3px;
+	background-color: var(--csc-hex-swatch, transparent);
+	cursor: pointer;
+}
+
+#csc-settings .csc-hex-swatch:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+#csc-settings .csc-hex-picker {
+	position: absolute;
+	z-index: 20;
+	top: calc(100% + 0.35rem);
+	left: 0;
+	box-sizing: border-box;
+	width: max-content;
+	max-width: min(20rem, calc(100vw - 2rem));
+	padding: 0.6rem;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+#csc-settings .csc-hex-picker[hidden] {
+	display: none;
+}
+
+#csc-settings .csc-hex-picker-preview {
+	display: block;
+	width: 100%;
+	height: 0.7rem;
+	margin: 0 0 0.5rem;
+	border: 1px solid #8c8f94;
+	border-radius: 2px;
+	background-color: var(--csc-hex-swatch, transparent);
+}
+
+#csc-settings .csc-hex-picker-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-top: 0.55rem;
+}
+
+#csc-settings.csc-no-iris .csc-hex-swatch,
+#csc-settings.csc-no-iris .csc-hex-picker {
+	display: none;
+}
+
+#csc-settings .csc-hex-stage,
+#csc-settings .csc-hex-picker .wp-color-result,
+#csc-settings .csc-hex-picker .wp-picker-input-wrap,
+#csc-settings .csc-hex-picker .wp-picker-clear,
+#csc-settings .csc-hex-picker .wp-picker-default {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+	pointer-events: none;
+}
+
+#csc-settings .csc-hex-picker .wp-picker-container {
+	display: block;
+}
+
+#csc-settings .csc-hex-picker .iris-picker {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	display: block !important;
+}

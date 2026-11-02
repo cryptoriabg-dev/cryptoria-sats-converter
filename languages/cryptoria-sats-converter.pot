@@ -1,0 +1,228 @@
+# Cryptoria Bitcoin/Sats Converter
+# Copyright (C) Cryptoria
+# This file is distributed under the same license as the plugin.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cryptoria Bitcoin/Sats Converter 1.2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: cryptoria-sats-converter\n"
+
+msgid "Invalid value."
+msgstr ""
+
+msgid "Enter a valid price for 1 BTC."
+msgstr ""
+
+msgid "Your browser does not support automatic conversion."
+msgstr ""
+
+msgid "The converter could not load. Refresh the page to try again."
+msgstr ""
+
+msgid "Bitcoin calculator: price, BTC and satoshis"
+msgstr ""
+
+msgid "Conversion requires JavaScript enabled in a modern browser."
+msgstr ""
+
+msgid "JavaScript is disabled, so the converter is not available."
+msgstr ""
+
+msgid "Currency"
+msgstr ""
+
+#. translators: %s: currency code.
+msgid "Currency: %s"
+msgstr ""
+
+msgid "Price for 1 BTC"
+msgstr ""
+
+#. translators: %s: currency code.
+msgid "Amount in %s"
+msgstr ""
+
+msgid "Bitcoin (BTC)"
+msgstr ""
+
+msgid "Satoshis (sats)"
+msgstr ""
+
+msgid "Enter the price of 1 BTC."
+msgstr ""
+
+msgid "Manual rate — it does not update automatically."
+msgstr ""
+
+#. translators: %s: human-readable date/time.
+msgid "Rate set by the site administrator · updated %s"
+msgstr ""
+
+msgid "This rate may be outdated."
+msgstr ""
+
+msgid "Cryptoria Sats Converter"
+msgstr ""
+
+msgid "Bitcoin/Sats Converter"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+#. translators: %s: currency code.
+msgid "Enter a valid price for 1 BTC in %s."
+msgstr ""
+
+#. translators: %s: currency code.
+msgid "Less than 0.01 %s"
+msgstr ""
+
+msgid "Visitor enters the rate (default)"
+msgstr ""
+
+msgid "Administrator-defined rate"
+msgstr ""
+
+msgid "Exchange-rate mode"
+msgstr ""
+
+msgid "Enabled fiat currencies"
+msgstr ""
+
+msgid "At least one currency must remain enabled."
+msgstr ""
+
+msgid "Default currency"
+msgstr ""
+
+msgid "Must be one of the enabled currencies."
+msgstr ""
+
+msgid "Administrator-defined rates"
+msgstr ""
+
+#. translators: %s: currency code.
+msgid "BTC/%s rate"
+msgstr ""
+
+#. translators: %s: human-readable date/time.
+msgid "Last updated: %s"
+msgstr ""
+
+msgid "possibly outdated"
+msgstr ""
+
+msgid "No saved rate."
+msgstr ""
+
+msgid "Appearance"
+msgstr ""
+
+msgid "Neutral Light"
+msgstr ""
+
+msgid "Dark"
+msgstr ""
+
+msgid "Custom"
+msgstr ""
+
+msgid "The Neutral Light and Dark presets use accessible default contrast. After choosing custom colours, check that text, borders, focus and error states remain readable. You are responsible for contrast in custom combinations."
+msgstr ""
+
+msgid "Custom colours"
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Primary text"
+msgstr ""
+
+msgid "Secondary text"
+msgstr ""
+
+msgid "Input background"
+msgstr ""
+
+msgid "Input text"
+msgstr ""
+
+msgid "Border"
+msgstr ""
+
+msgid "Disabled background"
+msgstr ""
+
+msgid "Disabled text"
+msgstr ""
+
+msgid "Focus"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Selected currency"
+msgstr ""
+
+msgid "Accent"
+msgstr ""
+
+msgid "Six-digit hexadecimal colour, for example #2B1720."
+msgstr ""
+
+msgid "Enter a valid six-digit hexadecimal colour."
+msgstr ""
+
+msgid "Apply colour"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+#. translators: %s: colour setting name, e.g. Background
+msgid "Choose %s colour"
+msgstr ""
+
+msgid "Convert Bitcoin and satoshis, with optional EUR/USD calculations using visitor or administrator rates. No external API requests."
+msgstr ""
+
+msgid "Usage"
+msgstr ""
+
+msgid "Place this shortcode in content, a widget, or a template:"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Current mode"
+msgstr ""
+
+msgid "Enabled currencies"
+msgstr ""
+
+#. translators: %s: currency code.
+msgid "%s rate status"
+msgstr ""
+
+msgid "available"
+msgstr ""
+
+msgid "missing"
+msgstr ""
+
+msgid "entered by the visitor"
+msgstr ""
